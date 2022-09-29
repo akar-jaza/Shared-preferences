@@ -76,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   MaterialPageRoute(builder: (context) => const ViewNotes()),
                 );
               },
-              color: CupertinoColors.activeOrange,
+              color: CupertinoColors.activeGreen,
               child: const Text('View Notes'),
             ),
           ],
