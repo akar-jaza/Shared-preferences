@@ -30,7 +30,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final notesController = TextEditingController();
+  TextEditingController notesController = TextEditingController();
 
   Future<void> setNotesData(notesvalue) async {
     final SharedPreferences preferences = await SharedPreferences.getInstance();
@@ -40,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    notesController.dispose();
+    // notesController.dispose();
   }
 
   @override
@@ -50,10 +50,10 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           children: [
-             Padding(
+            Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
               child: TextField(
-                // controller: notesController,
+                controller: notesController,
               ),
             ),
             const SizedBox(
@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             CupertinoButton(
               onPressed: () {
-                setNotesData(notesController.value.toString());
+                setNotesData(notesController.text);
               },
               color: CupertinoColors.activeBlue,
               child: const Text('Save'),
