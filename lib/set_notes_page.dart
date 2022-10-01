@@ -1,3 +1,4 @@
+import 'package:file_operations/theme_switch.dart';
 import 'package:file_operations/view_notes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,8 @@ class _SetNotesState extends State<SetNotes> {
     preferences.setString("noteData", notesvalue);
   }
 
+  bool wifi = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,6 +28,7 @@ class _SetNotesState extends State<SetNotes> {
       body: Center(
         child: Column(
           children: [
+            ThemeSwitch(wifi: wifi),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
               child: TextField(
@@ -60,3 +64,5 @@ class _SetNotesState extends State<SetNotes> {
     );
   }
 }
+
+// ignore: must_be_immutable
