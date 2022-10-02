@@ -5,7 +5,7 @@ class ViewNotes extends StatefulWidget {
   const ViewNotes({super.key});
 
   @override
-  State<ViewNotes> createState() => _ViewNotesState();
+  State<ViewNotes> get createState => _ViewNotesState();
 }
 
 class _ViewNotesState extends State<ViewNotes> {

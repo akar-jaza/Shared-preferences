@@ -11,7 +11,7 @@ class ThemeSwitch extends StatefulWidget {
    bool wifi = false;
 
   @override
-  State<ThemeSwitch> createState() => _ThemeSwitchState();
+  State<ThemeSwitch> get createState => _ThemeSwitchState();
 }
 
 class _ThemeSwitchState extends State<ThemeSwitch> {

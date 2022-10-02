@@ -8,7 +8,7 @@ class SetNotes extends StatefulWidget {
   const SetNotes({super.key});
 
   @override
-  State<SetNotes> createState() => _SetNotesState();
+  State<SetNotes> get createState => _SetNotesState();
 }
 
 class _SetNotesState extends State<SetNotes> {
